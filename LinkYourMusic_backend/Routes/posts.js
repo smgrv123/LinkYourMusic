@@ -10,12 +10,12 @@ router.post("/", async (req, res) => {
     songURL: req.body.songURL,
   });
   try {
-    const postData=await posts.save()
-    res.send(postData)
+    const postData = await posts.save();
+    res.send(postData);
   } catch (error) {
-      res.sendStatus(404)
-      res.send(error)
+    res.sendStatus(404);
+    res.json({ message: error });
   }
 });
 
-module.exports=router
+module.exports = router;

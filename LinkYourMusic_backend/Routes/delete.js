@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const Post = require("../models/post");
 
-router.delete("/:id", async (req, res) => {
+router.delete("/", async (req, res) => {
   try {
-    const deleted = await Post.deleteOne({ _id: req.params.id });
+    const deleted = await Post.deleteOne({ _id: req.body._id });
     res.json({
       id: deleted.$clusterTime.signature.keyId,
       message: "Object has been successfully removed",
