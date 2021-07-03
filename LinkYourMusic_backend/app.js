@@ -9,7 +9,7 @@ const deleteData = require("./Routes/delete");
 const patchName = require("./Routes/patchSongName");
 const patchURL = require("./Routes/patchSongURL");
 
-app.listen(3000);
+app.listen(process.env.PORT||3000);
 app.use(bodyParser.json());
 app.use("/get", getData);
 app.use("/posts", postData);
