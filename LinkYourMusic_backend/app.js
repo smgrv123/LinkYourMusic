@@ -17,7 +17,7 @@ app.use("/updateName", patchName);
 app.use("/updateURL", patchURL);
 
 mongoose.connect(
-  process.env.DB_CONNECTOR,
+  'mongodb+srv://Sumrit:Sumrit123@cluster0.wpe7m.mongodb.net/bd1_node_prac?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log("connected to db");
